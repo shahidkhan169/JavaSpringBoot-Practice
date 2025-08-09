@@ -30,4 +30,7 @@ public class BookController {
         List<BookDTO> list=bookService.findAllBooks();
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(),"Success",list,"All Books"));
     }
+
+    @PostMapping("findByName")
+    ResponseEntity<ApiResponse> findByName(@)
 }

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BookServiceRepo extends JpaRepository<BookEntity,Integer> {
-
+    BookEntity findByBookName(String bookName);
 }

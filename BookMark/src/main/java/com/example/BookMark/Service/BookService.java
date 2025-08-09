@@ -33,4 +33,10 @@ public class BookService implements BookInterface {
         List<BookEntity> list=bookServiceRepo.findAll();
         return list.stream().map(bookMapper::entityToDto).collect(Collectors.toList());
     }
+
+    public BookDTO findByBookName(String name)
+    {
+        BookEntity book=bookServiceRepo.findByBookName(name);
+        return bookMapper.entityToDto(book);
+    }
 }

@@ -8,5 +8,5 @@ public interface BookInterface {
 
     public BookDTO createBook(BookDTO bookDTO);
     public List<BookDTO> findAllBooks();
-
+    public BookDTO findByBookName(String name);
 }
